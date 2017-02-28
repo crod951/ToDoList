@@ -4,5 +4,3 @@ dist/
 node_modules/
 bower_components/
 .idea/
-gulp_tasks/
-conf/
