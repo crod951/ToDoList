@@ -1,6 +1,29 @@
-<div class="container">
-  <div class="jumbotron">
-    <h1 class="text-center">To Do List Dashboard</h1>
-    <h2 class="text-center">{{dashboardCtrl.numTasks}}</h2>
+<div class="container container-body">
+  <div class="jumbotron dashboard-jumbotron text-center">
+    <h1>To Do List</h1>
+  </div>
+  <div class="row">
+    <h1 class="text-center">Today</h1>
+    <div class="text-center col-sm-3">
+      <h1>{{dashboardCtrl.numTasks}}</h1>
+      <h2>Total Tasks</h2>
+    </div>
+    <div class="text-center col-sm-3">
+      <h1>{{dashboardCtrl.numTasks}}</h1>
+      <h2>Estimates</h2>
+    </div>
+    <div class="text-center col-sm-3">
+      <h1>{{dashboardCtrl.numTasks}}</h1>
+      <h2>Tasks Due</h2>
+    </div>
+    <div class="text-center col-sm-3">
+      <h1>{{dashboardCtrl.numTasks}}</h1>
+      <h2>Completed Tasks</h2>
+    </div>
+  </div>
+  <div class="row text-center" style="margin-top: 50px;">
+    <button ui-sref="list" class="btn btn-lg btn-success">
+      Get Started
+    </button>
   </div>
 </div>

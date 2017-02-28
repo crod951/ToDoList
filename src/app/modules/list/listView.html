@@ -1,3 +1,45 @@
 <div class="container">
-  <h3 class="text-center">List</h3>
+  <div class="row pull-right">
+    <h4 class="text-center">Today</h4>
+    <div class="text-center col-sm-3">
+      <h4>{{listCtrl.numTasks}}</h4>
+      <h5>Total Tasks</h5>
+    </div>
+    <div class="text-center col-sm-3">
+      <h4>{{listCtrl.numTasks}}</h4>
+      <h5>Estimates</h5>
+    </div>
+    <div class="text-center col-sm-3">
+      <h4>{{listCtrl.numTasks}}</h4>
+      <h5>Tasks Due</h5>
+    </div>
+    <div class="text-center col-sm-3">
+      <h4>{{listCtrl.numTasks}}</h4>
+      <h5>Completed Tasks</h5>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row col-xs-12 col-sm-7">
+    <input class="form-control input-lg" ng-focus="listCtrl.setCreating()" ng-blur="listCtrl.setNotCreating()" placeholder="Create a Task..."/>
+  </div>
+  <div class="col-xs-12 col-sm-3">
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+        <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li><a href="#">HTML</a></li>
+        <li><a href="#">CSS</a></li>
+        <li><a href="#">JavaScript</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-2">
+    <button type="button" class="btn btn-success btn-lg">
+      <span class="fa fa-plus"></span> Create Task
+    </button>
+  </div>
+  <!--<div class="row col-sm-4">-->
+    <!--<input class="form-control input-lg" ng-if="listCtrl.setCreatingValue" placeholder="Add a Tag..."/>-->
+  <!--</div>-->
 </div>
