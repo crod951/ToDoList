@@ -3,6 +3,7 @@
     var vm = this;
     vm.numTasks = 0;
     vm.taskList = []
+    vm.todayDate = moment().format('ddd MMM Do YYYY');
     vm.setCreatingValue = false;
 
     vm.setCreating = function() {

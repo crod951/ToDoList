@@ -15,7 +15,7 @@ function routesConfig($stateProvider, $urlRouterProvider) {
     })
     .state('list', {
       url: '/list',
-      templateUrl: 'app/modules/list/listView.html',
+      templateUrl: 'app/modules/list/ListView.html',
       controller: 'ListController',
       controllerAs: 'listCtrl'
     })
