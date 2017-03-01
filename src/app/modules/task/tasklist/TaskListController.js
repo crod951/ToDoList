@@ -13,7 +13,7 @@
     vm.taskList = TaskService.taskList;
 
     vm.checkCreateNewTopic = function() {
-      if (vm.selectedTopic.name === "Create New Topic" || vm.newSelectedTopic.name === "Create New Topic") {
+      if ((vm.selectedTopic && vm.selectedTopic.name === "Create New Topic") || (vm.newSelectedTopic && vm.newSelectedTopic.name === "Create New Topic")) {
         var modalInstance = $uibModal.open({
           animation: false,
           backdrop: 'static',
@@ -31,7 +31,12 @@
               vm.topics.push({name: "Create New Topic"});
             }
             else {
-              vm.selectedTopic = undefined;
+              if (vm.selectedTopic) {
+                vm.selectedTopic = undefined;
+              }
+              else if (vm.newSelectedTopic) {
+                vm.newSelectedTopic = undefined;
+              }
             }
           }
         );
