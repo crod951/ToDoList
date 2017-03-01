@@ -7,12 +7,8 @@
     ];
 
     this.taskList = [
-      {id: 1, name: "Test Task", topic: "Personal", completed: false, description: "This is a Test Task"}
+      {id: 1, name: "Test Task", completed: false, description: "This is a Test Task", isEditing: false}
     ];
-
-    this.prependTaskList = function (data) {
-      this.taskList.unshift(data);
-    };
   }
   angular
     .module('ToDoList')
