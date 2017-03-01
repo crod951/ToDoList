@@ -1,0 +1,87 @@
+<div class="container">
+  <div class="row col-sm-9">
+    <div class="row col-sm-7">
+      <input class="form-control input-lg" ng-model="listCtrl.taskName" placeholder="Create a Task..."/>
+    </div>
+    <div class="col-sm-3">
+      <select class="form-control" style="height: 45px;"
+              ng-model="listCtrl.selectedTopic"
+              ng-options="topic.name for topic in listCtrl.topics"
+              ng-change="listCtrl.checkCreateNewTopic()">
+        <option value="" selected="selected">Select a Topic</option>
+      </select>
+    </div>
+    <div class="col-sm-2">
+      <button type="button" class="btn btn-success btn-lg" ng-disabled="!listCtrl.taskName || !listCtrl.selectedTopic" ng-click="listCtrl.createTask()">
+        <span class="fa fa-plus"></span> Create Task
+      </button>
+    </div>
+  </div>
+  <div class="row pull-right col-sm-3">
+    <div class="panel panel-primary">
+      <div class="text-center panel-heading">
+        <h4>{{listCtrl.todayDate}}</h4>
+      </div>
+      <div class="panel-footer" style="padding-left: 0px; padding-right: 0px;">
+        <div class="text-center box-seperator">
+          <h4>{{listCtrl.taskList.length}}</h4>
+          <h5>Total Tasks</h5>
+        </div>
+        <div class="text-center box-seperator">
+          <h4>{{listCtrl.numTasks}}</h4>
+          <h5>Estimates</h5>
+        </div>
+        <div class="text-center box-seperator">
+          <h4>{{listCtrl.numTasks}}</h4>
+          <h5>Tasks Due</h5>
+        </div>
+        <div class="text-center">
+          <h4>{{listCtrl.numTasks}}</h4>
+          <h5>Completed Tasks</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row col-sm-9" style="margin-top: 10px">
+    <h2 class="box-seperator">Task List</h2>
+    <div class="row task-row" ng-repeat="task in listCtrl.taskList">
+      <div class="col-sm-3 btn-group-sm btn-group-vertical" ng-if="!task.isEditing">
+        <button  type="button" class="btn btn-success">
+          <span class="fa fa-check"></span> Complete Task
+        </button>
+        <button type="button" class="btn btn-primary" ng-disabled="listCtrl.isEditing" ng-click="listCtrl.isEditTask(task.id, task.name, task.topic, task.description)">
+          <span class="fa fa-pencil"></span> Edit Task
+        </button>
+        <button type="button" class="btn btn-danger" ng-click="listCtrl.deleteTask(task.id)">
+          <span class="fa fa-trash"></span> Delete Task
+        </button>
+      </div>
+      <div class="col-sm-3 btn-group-lg btn-group-vertical" ng-if="task.isEditing">
+        <button type="button" class="btn btn-success" ng-click="listCtrl.saveDescription(task.id)">
+          <span class="fa fa-save"></span> Save
+        </button>
+        <button type="button" class="btn btn-danger" ng-click="listCtrl.isNotEditTask(task.id)">
+          <span class="fa fa-times"></span> Cancel
+        </button>
+      </div>
+      <div class="row">
+        <h4 style="display: inline-block" ng-if="!task.isEditing">{{task.name}}</h4><h6 style="display: inline-block" ng-if="task.topic && !task.isEditing">- {{task.topic.name}}</h6>
+        <div class="col-sm-5" ng-if="task.isEditing">
+            <input  class="form-control" ng-model="listCtrl.newTaskName"/>
+        </div>
+        <div class="col-sm-3" ng-if="task.isEditing">
+          <select class="form-control"
+                  ng-model="listCtrl.newSelectedTopic"
+                  ng-options="topic.name for topic in listCtrl.topics"
+                  ng-change="listCtrl.checkCreateNewTopic()">
+            <option value="" selected="selected">Select a Topic</option>
+          </select>
+        </div>
+        <h5 ng-if="task.description && !task.isEditing">{{task.description}}</h5>
+        <div class="col-sm-8" ng-if="task.isEditing">
+          <input class="form-control" ng-model="listCtrl.newDescription" placeholder="Description"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

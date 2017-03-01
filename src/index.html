@@ -22,8 +22,10 @@
 
 
   <body>
-    <div data-ng-include src="'app/modules/navbar/navbar.html'"></div>
-    <ui-view></ui-view>
+    <div ng-controller="NavbarController as navbarCtrl">
+      <div ng-include src="'app/modules/navbar/navbar.html'"></div>
+    </div>
+    <div ui-view></div>
   </body>
 
   <!-- build:js({.tmp,src}) scripts/vendor.js -->

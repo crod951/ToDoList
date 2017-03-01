@@ -9,11 +9,15 @@ function routesConfig($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('dashboard', {
       url: '/dashboard',
-      templateUrl: 'app/modules/dashboard/dashboardView.html'
+      templateUrl: 'app/modules/dashboard/DashboardView.html',
+      controller: 'DashboardController',
+      controllerAs: 'dashboardCtrl'
     })
     .state('list', {
-      url: '/list',
-      templateUrl: 'app/modules/list/listView.html'
+      url: '/tasklist',
+      templateUrl: 'app/modules/task/tasklist/TaskListView.html',
+      controller: 'TaskListController',
+      controllerAs: 'listCtrl'
     })
   ;
 }

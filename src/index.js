@@ -1,2 +1,2 @@
 angular
-  .module('ToDoList', ['ui.router']);
+  .module('ToDoList', ['ui.router', 'ui.bootstrap']);

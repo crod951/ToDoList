@@ -1,5 +1,5 @@
 body {
-  background-color: lightgrey;
+  background-color: white;
 }
 .navbar-inverse .navbar-nav li a{
   color: white;
@@ -9,4 +9,20 @@ body {
 }
 .navbar-inverse .navbar-nav li a:focus{
   color: green;
+}
+.dashboard-jumbotron{
+  background-color: #EEEEEE;
+  height: 300px;
+}
+.container-body{
+  margin-top: -10px;
+}
+.box-seperator{
+  border-bottom: 1px solid;
+}
+.task-row{
+  margin-bottom: 20px;
+}
+.remove-margin {
+  margin: 0px;
 }
