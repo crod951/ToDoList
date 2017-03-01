@@ -8,6 +8,7 @@
     vm.newTaskName = undefined;
     vm.newSelectedTopic = undefined;
     vm.newDescription = undefined;
+    vm.isEditing = false;
     vm.topics = TaskService.topics;
     vm.taskList = TaskService.taskList;
 
@@ -60,6 +61,7 @@
           vm.taskList[key].isEditing = true;
         }
       });
+      vm.isEditing = true;
       vm.newTaskName = name;
       vm.newSelectedTopic = topic;
       vm.newDescription = description;
@@ -71,6 +73,7 @@
           vm.taskList[key].isEditing = false;
         }
       });
+      vm.isEditing = false;
     };
 
     vm.saveDescription = function (id) {
@@ -82,6 +85,7 @@
           vm.taskList[key].isEditing = false;
         }
       });
+      vm.isEditing = false;
     };
 
   }

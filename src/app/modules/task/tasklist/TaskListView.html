@@ -49,7 +49,7 @@
         <button  type="button" class="btn btn-success">
           <span class="fa fa-check"></span> Complete Task
         </button>
-        <button type="button" class="btn btn-primary" ng-click="listCtrl.isEditTask(task.id, task.name, task.topic, task.description)">
+        <button type="button" class="btn btn-primary" ng-disabled="listCtrl.isEditing" ng-click="listCtrl.isEditTask(task.id, task.name, task.topic, task.description)">
           <span class="fa fa-pencil"></span> Edit Task
         </button>
         <button type="button" class="btn btn-danger" ng-click="listCtrl.deleteTask(task.id)">
