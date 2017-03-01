@@ -5,6 +5,11 @@
     vm.taskList = []
     vm.todayDate = moment().format('ddd MMM Do YYYY');
     vm.setCreatingValue = false;
+    vm.topics = [
+      {"name":"Personal"},
+      {"name":"Business"},
+      {"name":"Create New Topic"}
+    ]
 
     vm.setCreating = function() {
       vm.setCreatingValue = true;

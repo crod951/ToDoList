@@ -1,20 +1,16 @@
 <div class="container">
   <div class="row col-sm-9">
-    <div class="row col-xs-12 col-sm-7">
+    <div class="row col-sm-7">
       <input class="form-control input-lg" ng-focus="listCtrl.setCreating()" ng-blur="listCtrl.setNotCreating()" placeholder="Create a Task..."/>
     </div>
-    <div class="col-xs-12 col-sm-3">
-      <div class="dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
-          <span class="caret"></span></button>
-        <ul class="dropdown-menu">
-          <li><a href="#">HTML</a></li>
-          <li><a href="#">CSS</a></li>
-          <li><a href="#">JavaScript</a></li>
-        </ul>
-      </div>
+    <div class="col-sm-3">
+      <select class="form-control" style="height: 45px;"
+              data-ng-model="listCtrl.selectedTopic"
+              ng-options="topic.name for topic in listCtrl.topics">
+        <option value="" selected="selected">Select a Topic</option>
+      </select>
     </div>
-    <div class="col-xs-12 col-sm-2">
+    <div class="col-sm-2">
       <button type="button" class="btn btn-success btn-lg">
         <span class="fa fa-plus"></span> Create Task
       </button>
