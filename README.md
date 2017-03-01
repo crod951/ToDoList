@@ -4,7 +4,7 @@
 - limit of tasks for quality not quantity - optional
 - list of tasks
    - tags(color coded)
-   - main subject (ex: "Personal", "Chores") - <b>done</b>
+   - main topic (ex: "Personal", "Chores") - <b>done</b>
    - subtasks
    - priority
    - time estimates
