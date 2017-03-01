@@ -12,10 +12,17 @@ body {
 }
 .dashboard-jumbotron{
   background-color: #EEEEEE;
+  height: 300px;
 }
 .container-body{
   margin-top: -10px;
 }
 .box-seperator{
   border-bottom: 1px solid;
+}
+.task-row{
+  margin-bottom: 20px;
+}
+.remove-margin {
+  margin: 0px;
 }

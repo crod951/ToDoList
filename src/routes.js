@@ -14,9 +14,9 @@ function routesConfig($stateProvider, $urlRouterProvider) {
       controllerAs: 'dashboardCtrl'
     })
     .state('list', {
-      url: '/list',
-      templateUrl: 'app/modules/list/ListView.html',
-      controller: 'ListController',
+      url: '/tasklist',
+      templateUrl: 'app/modules/task/tasklist/TaskListView.html',
+      controller: 'TaskListController',
       controllerAs: 'listCtrl'
     })
   ;
