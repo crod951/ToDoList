@@ -6,7 +6,8 @@
     <div class="col-sm-3">
       <select class="form-control" style="height: 45px;"
               data-ng-model="listCtrl.selectedTopic"
-              ng-options="topic.name for topic in listCtrl.topics">
+              ng-options="topic.name for topic in listCtrl.topics"
+              ng-change="listCtrl.checkCreateNewTopic()">
         <option value="" selected="selected">Select a Topic</option>
       </select>
     </div>
